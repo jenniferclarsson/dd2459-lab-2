@@ -11,13 +11,13 @@ class test_search(TestCase):
 
     def test(self):
         for i, pairs in enumerate(AllPairs(self.parameters)):
-            res = search(pairs[0], pairs[1])
+            res = member(pairs[0], pairs[1])
             if pairs[1] == 1:
-                self.assertEqual(res, 0)
+                self.assertTrue(res)
             elif pairs[1] == 10:
-                self.assertEqual(res, len(pairs[0])-1)
+                self.assertTrue(res)
             else:
-                self.assertEqual(res, -1)
+                self.assertFalse(res)
 
 
 if __name__ == "__main__":

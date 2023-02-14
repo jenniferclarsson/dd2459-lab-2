@@ -29,7 +29,7 @@ def binary_search(A, key):
     else:
         return -1
     
-def search(A, key):
+def member(A, key):
     sorted = insertion_sort(A)
     index = binary_search(sorted, key)
-    return index
+    return (index > -1)
