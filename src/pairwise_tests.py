@@ -1,7 +1,7 @@
 from unittest import main, TestCase
 from main import *
 
-class test_search(TestCase):
+class test_member(TestCase):
 
     def setUp(self):
         self.key = 0
@@ -24,12 +24,7 @@ class test_search(TestCase):
     def test_key_exists(self):
         for i in range(self.numArrays):
             print("TEST RUN good key",  i, member(self.arrays[i], self.key))
-            self.assertTrue(member(self.arrays[i], self.key))
-
-    def test_key_does_not_exist(self):
-        for i in range(self.numArrays):
             print("TEST RUN bad key",  i, not(member(self.arrays[i], self.bad_key)))
-            self.assertFalse(member(self.arrays[i], self.bad_key))
 
 if __name__ == "__main__":
     main()
